@@ -1,1 +1,31 @@
-<p>desert works!</p>
+<div class="dessert">
+    <div class="dessert-img">
+      <img [src]="model.image.desktop" [ngClass]="{ selected: isSelected }" />
+      <div class="add-cart">
+        <button
+          *ngIf="chosen === false"
+          (click)="PickItem()"
+          type="button"
+          class="add-cart-button"
+        >
+          <img class="add-cart-icon" src="/public/images/icon-add-to-cart.svg" /> Add to
+          Cart
+        </button>
+        <form class="pick-form" *ngIf="chosen === true">
+          <button class="decrease-btn" type="button" (click)="Decrease()">
+            <img src="/public/images/icon-decrement-quantity.svg" />
+          </button>
+          {{ nbItem }}
+          <button class="increase-btn" type="button" (click)="Increase()">
+            <img src="/public/images/icon-increment-quantity.svg" />
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="content">
+      <span class="dessert-category">{{ model.category }}</span>
+      <h4 class="dessert-name">{{ model.name }}</h4>
+      <p class="dessert-price">{{ formattedPrice }}</p>
+    </div>
+  </div>
+  

@@ -1,1 +1,46 @@
-<p>cart works!</p>
+<div class="container">
+    <div class="title">
+      <h1>Your Cart ({{ CountItems() }})</h1>
+    </div>
+    <div class="added-items">
+      <div *ngIf="changes.length === 0">
+        <img src="/public/images/illustration-empty-cart.svg" alt="icon" />
+        <p [ngStyle]="{ 'text-align': 'center' }">
+          Your added items will be here
+        </p>
+      </div>
+      <div *ngIf="changes.length > 0">
+        <div class="item" *ngFor="let item of changes">
+          <div class="item-about">
+            <div class="item-name">
+              <p>{{ item.model.name }}</p>
+            </div>
+            <div class="about-price">
+              <p class="curr-quantity">{{ item.quantity }}x</p>
+              <p class="one-price">&#64;{{ item.model.price }}</p>
+              <p class="total-price">{{ item.total }}</p>
+            </div>
+          </div>
+          <div class="item-interaction">
+            <img src="/public/images/icon-remove-item.svg" (click)="RemoveItem(item)" />
+          </div>
+        </div>
+        <div class="order-total">
+          <p class="order-label">Order Total</p>
+          <p class="order-value">${{ CountTotal() }}</p>
+        </div>
+        <div class="reminder">
+          <div class="reminder-icon">
+            <img src="/public/images/icon-carbon-neutral.svg" />
+          </div>
+          <p>
+            This is a <span class="reminder-info">carbon-neutral</span> delivery
+          </p>
+        </div>
+        <div class="confirm-btn">
+          <button type="button" (click)="Confirm()">Confirm Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

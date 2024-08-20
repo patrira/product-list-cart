@@ -1,1 +1,34 @@
-<p>home works!</p>
+<div class="container">
+    <div class="wrapper">
+      <div class="desserts">
+        <div class="desserts-title">Desserts</div>
+        <div class="desserts-grid">
+          <div class="dessert-container" *ngFor="let dessert of desserts">
+            <app-dessert
+              (itemEvent)="SendToCart($event)"
+              (deleteItemEvent)="RemoveFromCart($event)"
+              [model]="dessert"
+            ></app-dessert>
+          </div>
+        </div>
+      </div>
+      <div class="cart">
+        <app-cart
+          [changes]="changes"
+          (confirmedOrder)="confirmedOrder = true"
+        ></app-cart>
+      </div>
+    </div>
+  </div>
+  <div
+    class="overlay"
+    (click)="confirmedOrder = false"
+    *ngIf="confirmedOrder"
+  ></div>
+  <app-confirm-order
+    [items]="changes"
+    class="confirm-order"
+    *ngIf="confirmedOrder"
+    (backEvent)="Reset($event)"
+  ></app-confirm-order>
+  
