@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HomeComponent } from './components/home/home.component';
-import { DesertComponent } from './components/desert/desert.component';
+import { DessertComponent } from './components/desert/dessert.component';
 import { ConfirmOrderComponent } from './components/confirm-order/confirm-order.component';
+
 
 
 
@@ -15,12 +16,14 @@ import { ConfirmOrderComponent } from './components/confirm-order/confirm-order.
     AppComponent,
     CartComponent,
     HomeComponent,
-    DesertComponent,
-    ConfirmOrderComponent
+    DessertComponent,
+    ConfirmOrderComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
     
     
   ],

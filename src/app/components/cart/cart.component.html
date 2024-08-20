@@ -4,7 +4,7 @@
     </div>
     <div class="added-items">
       <div *ngIf="changes.length === 0">
-        <img src="/public/images/illustration-empty-cart.svg" alt="icon" />
+        <img src="/assets/images/illustration-empty-cart.svg" alt="icon" />
         <p [ngStyle]="{ 'text-align': 'center' }">
           Your added items will be here
         </p>
@@ -22,7 +22,7 @@
             </div>
           </div>
           <div class="item-interaction">
-            <img src="/public/images/icon-remove-item.svg" (click)="RemoveItem(item)" />
+            <img src="/assets/images/icon-remove-item.svg" (click)="RemoveItem(item)" />
           </div>
         </div>
         <div class="order-total">
@@ -31,7 +31,7 @@
         </div>
         <div class="reminder">
           <div class="reminder-icon">
-            <img src="/public/images/icon-carbon-neutral.svg" />
+            <img src="/assets/images/icon-carbon-neutral.svg" />
           </div>
           <p>
             This is a <span class="reminder-info">carbon-neutral</span> delivery

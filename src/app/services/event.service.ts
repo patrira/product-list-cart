@@ -9,5 +9,5 @@ export class EventService {
   eventSubject = new Subject<string>();
   orderSubject = new Subject<Changes[]>();
 
-  constructor() { }
+  
 }

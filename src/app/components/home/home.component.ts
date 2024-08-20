@@ -1,18 +1,17 @@
-import { CommonModule } from '@angular/common';
+
 import {Component,OnInit,} from '@angular/core';
-import { DesertComponent } from '../desert/desert.component';
 import { Dessert } from '../../models/dessert.model';
 import { DessertService } from '../../services/dessert.service';
-import { CartComponent } from '../cart/cart.component';
 import { Changes } from '../../models/changes.model';
 import { FormatPrice } from '../../priceFormat';
 
-import { ConfirmOrderComponent } from '../confirm-order/confirm-order.component';
+
 
 @Component({
   selector: 'app-home',
+
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
   desserts: Dessert[] = [];

@@ -1,13 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  
-  OnDestroy,
-  OnInit,
-  Output,
-  
-} from '@angular/core';
+import {Component,EventEmitter,Input,OnDestroy,OnInit,Output,} from '@angular/core';
 import { Dessert } from '../../models/dessert.model';
 import { FormatPrice } from '../../priceFormat';
 import { Changes } from '../../models/changes.model';
@@ -16,10 +7,10 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-dessert',
-  templateUrl: './desert.component.html',
-  styleUrl: './desert.component.css',
+  templateUrl: './dessert.component.html',
+  styleUrl: './dessert.component.css',
 })
-export class DesertComponent implements OnInit, OnDestroy {
+export class DessertComponent implements OnInit, OnDestroy {
   @Input() model!: Dessert;
   @Output() itemEvent = new EventEmitter<Changes>();
   @Output() deleteItemEvent = new EventEmitter<string>();

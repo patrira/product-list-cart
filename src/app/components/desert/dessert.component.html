@@ -8,16 +8,16 @@
           type="button"
           class="add-cart-button"
         >
-          <img class="add-cart-icon" src="/public/images/icon-add-to-cart.svg" /> Add to
+          <img class="add-cart-icon" src="/assets/images/icon-add-to-cart.svg" /> Add to
           Cart
         </button>
         <form class="pick-form" *ngIf="chosen === true">
           <button class="decrease-btn" type="button" (click)="Decrease()">
-            <img src="/public/images/icon-decrement-quantity.svg" />
+            <img src="/assets/images/icon-decrement-quantity.svg" />
           </button>
           {{ nbItem }}
           <button class="increase-btn" type="button" (click)="Increase()">
-            <img src="/public/images/icon-increment-quantity.svg" />
+            <img src="/assets/images/icon-increment-quantity.svg" />
           </button>
         </form>
       </div>
