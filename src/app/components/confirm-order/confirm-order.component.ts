@@ -1,16 +1,6 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  
-  OnInit,
-  Output,
-  
-} from '@angular/core';
+import {Component,EventEmitter,Input,OnInit,Output,} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Changes } from '../../models/changes.model';
-
-import { CommonModule } from '@angular/common';
 import { FormatPrice } from '../../priceFormat';
 
 @Component({

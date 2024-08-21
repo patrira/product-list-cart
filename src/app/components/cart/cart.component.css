@@ -1,351 +1,328 @@
-
-
-
-:root {
-    --red: hsl(14, 86%, 42%);
-    --green: hsl(159, 69%, 38%);
-
-    --rose-50: hsl(20, 50%, 98%);
-    --rose-100: hsl(13, 31%, 94%);
-    --rose-300: hsl(14, 25%, 72%);
-    --rose-400: hsl(7, 20%, 60%);
-    --rose-500: hsl(12, 20%, 44%);
-    --rose-900: #260f08;
-
-    --weight1: 400;
-    --weight2: 600;
-    --weight3: 700;
-}
-
-
-.flex {
-    display: flex;
-}
-
-.grid {
-    display: grid;
-}
-
-.flex-center {
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-space-between {
-    justify-content: space-between;
-}
-
-.flex-start {
-    justify-content: start;
-}
-
+@import url("../../../css/fonts.css");
+@import url("../../../css/mixins.css");
+@import url("../../../css/variables.css");
+@import url("../../../css/others.css");
 
 @media (min-width: 768px) {
-    .container {
-        background-color: var(--rose-50);
-        padding: 35px 25px;
-        border-radius: 5px;
-    }
+  .container {
+    background-color: white; 
+    padding: 35px 25px;
+    border-radius: 5px;
+  }
 
-    .title {
-        margin-bottom: 25px;
-    }
+  .container .title {
+    margin-bottom: 25px;
 
-    .title h1 {
-        color: var(--red);
-        font-family: "RedhatSemiBold", sans-serif;
-        font-size: 24px;
-    }
+  }
 
-    .added-items {
-        text-align: center;
-    }
+  .container .title h1 {
+    color: #e3342f; 
+    font-family: "RedhatSemiBold";
+    font-size: 24px;
+  }
 
-    .added-items img {
-        margin-bottom: 20px;
-    }
+  .container .added-items {
+    text-align: center;
+  }
 
-    .added-items p {
-        text-align: left;
-        color: var(--rose-900);
-        font-family: "RedhatSemiBold", sans-serif;
-    }
+  .container .added-items img {
+    margin-bottom: 20px;
+  }
 
-    .item {
-        width: 100%;
-        margin-bottom: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .container .added-items p {
+    text-align: left;
+    color: #3b0d0c;
+    font-family: "RedhatSemiBold";
+  }
 
-    .item-about .item-name {
-        margin-bottom: 5px;
-    }
+  .container .added-items .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
-    .item-interaction {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        height: 100%;
-    }
+  .container .added-items .item .item-about .item-name {
+    margin-bottom: 5px;
+  }
 
-    .item-interaction img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid var(--rose-300);
-        padding: 5px;
-        border-radius: 50%;
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        transform: translateY(50%);
-    }
+  .container .added-items .item .item-interaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+  }
 
-    .item-interaction img:hover {
-        border: 1px solid black;
-        filter: brightness(0) saturate(100%) invert(0%) sepia(96%)
-            saturate(7480%) hue-rotate(296deg) brightness(101%) contrast(101%);
-    }
+  .container .added-items .item .item-interaction img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e5e7eb; 
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+  }
 
-    .about-price {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        font-size: 13px;
-    }
+  .container .added-items .item .item-interaction img:hover {
+    border: 1px solid black;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(96%)
+      saturate(7480%) hue-rotate(296deg) brightness(101%) contrast(101%);
+  }
 
-    .about-price .curr-quantity {
-        color: var(--red);
-        font-size: 13px;
-        margin-right: 5px;
-    }
+  .container .added-items .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
 
-    .about-price .one-price {
-        color: var(--rose-300);
-        margin-right: 5px;
-    }
+  .container .added-items .item .about-price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+  }
 
-    .about-price .total-price {
-        color: var(--rose-400);
-    }
+  .container .added-items .item .about-price .curr-quantity {
+    color: #e3342f; 
+    font-size: 13px;
+    margin-right: 5px;
+  }
 
-    .order-total {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-    }
+  .container .added-items .item .about-price .one-price {
+    color: #e5e7eb; 
+    margin-right: 5px;
+  }
 
-    .order-total .order-label {
-        font-size: 12px;
-        color: var(--rose-500);
-    }
+  .container .added-items .item .about-price .total-price {
+    color: #d2a6a3; 
+  }
 
-    .order-total .order-value {
-        font-family: "RedhatBold", sans-serif;
-        font-size: 16px;
-        color: var(--rose-900);
-    }
+  .container .added-items .order-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
-    .reminder {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px;
-        margin-bottom: 20px;
-        padding: 15px;
-        background-color: var(--rose-100);
-    }
+  .container .added-items .order-total .order-label {
+    font-size: 12px;
+    color: #b85b52; 
+  }
 
-    .reminder p {
-        color: var(--rose-500);
-    }
+  .container .added-items .order-total .order-value {
+    font-family: "RedhatBold";
+    font-size: 16px;
+    color: #3b0d0c; 
+  }
 
-    .reminder-icon {
-        margin-right: 10px;
-    }
+  .container .added-items .reminder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white; 
+  }
 
-    .reminder-icon img {
-        margin: auto;
-    }
+  .container .added-items .reminder p {
+    color: #b85b52;
+  }
 
-    .reminder-info {
-        font-family: "RedhatSemiBold", sans-serif;
-        color: var(--rose-900);
-    }
+  .container .added-items .reminder .reminder-icon {
+    margin-right: 10px;
+  }
 
-    .confirm-btn {
-        width: 100%;
-    }
+  .container .added-items .reminder .reminder-icon img {
+    margin: auto;
+  }
 
-    .confirm-btn button {
-        width: 100%;
-        border-radius: 30px;
-        background-color: var(--red);
-        padding: 15px;
-        color: var(--rose-50);
-    }
+  .container .added-items .reminder .reminder-info {
+    font-family: "RedhatSemiBold";
+    color: #3b0d0c; 
+  }
 
-    .confirm-btn button:hover {
-        cursor: pointer;
-        background-color: hsl(14, 86%, 32%); 
-    }
+  .container .added-items .confirm-btn {
+    width: 100%;
+  }
+
+  .container .added-items .confirm-btn button {
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    background-color: #e3342f; 
+    padding: 15px;
+    color: #fbeaec; 
+  }
+
+  .container .added-items .confirm-btn button:hover {
+    cursor: pointer;
+    background: #c72d26; 
+  }
 }
 
 @media (min-width: 300px) {
-    .container {
-        background-color: var(--rose-50);
-        padding: 35px 25px;
-        border-radius: 5px;
-    }
+  .container {
+    background-color: white; 
+    padding: 35px 25px;
+    border-radius: 5px;
+  }
 
-    .title {
-        margin-bottom: 25px;
-    }
+  .container .title {
+    margin-bottom: 25px;
+  }
 
-    .title h1 {
-        color: var(--red);
-        font-family: "RedhatSemiBold", sans-serif;
-        font-size: 24px;
-    }
+  .container .title h1 {
+    color: #e3342f; 
+    font-family: "RedhatSemiBold";
+    font-size: 24px;
+  }
 
-    .added-items {
-        text-align: center;
-    }
+  .container .added-items {
+    text-align: center;
+  }
 
-    .added-items img {
-        margin-bottom: 20px;
-    }
+  .container .added-items img {
+    margin-bottom: 20px;
+  }
 
-    .added-items p {
-        text-align: left;
-        color: var(--rose-900);
-        font-family: "RedhatSemiBold", sans-serif;
-    }
+  .container .added-items p {
+    text-align: left;
+    color: #3b0d0c; 
+    font-family: "RedhatSemiBold";
+  }
 
-    .item {
-        width: 100%;
-        margin-bottom: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .container .added-items .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
-    .item-about .item-name {
-        margin-bottom: 5px;
-    }
+  .container .added-items .item .item-about .item-name {
+    margin-bottom: 5px;
+  }
 
-    .item-interaction {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        height: 100%;
-    }
+  .container .added-items .item .item-interaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+  }
 
-    .item-interaction img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid var(--rose-300);
-        padding: 5px;
-        border-radius: 50%;
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        transform: translateY(50%);
-    }
+  .container .added-items .item .item-interaction img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e5e7eb; 
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+  }
 
-    .item-interaction img:hover {
-        border: 1px solid black;
-        filter: brightness(0) saturate(100%) invert(0%) sepia(96%)
-            saturate(7480%) hue-rotate(296deg) brightness(101%) contrast(101%);
-    }
+  .container .added-items .item .item-interaction img:hover {
+    border: 1px solid black;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(96%)
+      saturate(7480%) hue-rotate(296deg) brightness(101%) contrast(101%);
+  }
 
-    .about-price {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        font-size: 13px;
-    }
+  .container .added-items .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
 
-    .about-price .curr-quantity {
-        color: var(--red);
-        font-size: 13px;
-        margin-right: 5px;
-    }
+  .container .added-items .item .about-price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+  }
 
-    .about-price .one-price {
-        color: var(--rose-300);
-        margin-right: 5px;
-    }
+  .container .added-items .item .about-price .curr-quantity {
+    color: #e3342f; 
+    font-size: 13px;
+    margin-right: 5px;
+  }
 
-    .about-price .total-price {
-        color: var(--rose-400);
-    }
+  .container .added-items .item .about-price .one-price {
+    color: #e5e7eb; 
+    margin-right: 5px;
+  }
 
-    .order-total {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-    }
+  .container .added-items .item .about-price .total-price {
+    color: #d2a6a3; 
+  }
 
-    .order-total .order-label {
-        font-size: 12px;
-        color: var(--rose-500);
-    }
+  .container .added-items .order-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
-    .order-total .order-value {
-        font-family: "RedhatBold", sans-serif;
-        font-size: 16px;
-        color: var(--rose-900);
-    }
+  .container .added-items .order-total .order-label {
+    font-size: 12px;
+    color: #b85b52; 
+  }
 
-    .reminder {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px;
-        margin-bottom: 20px;
-        padding: 15px;
-        background-color: var(--rose-100);
-    }
+  .container .added-items .order-value {
+    font-family: "RedhatBold";
+    font-size: 16px;
+    color: #3b0d0c; 
+  }
 
-    .reminder p {
-        color: var(--rose-500);
-    }
+  .container .added-items .reminder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: hsl(13, 31%, 94%); 
+  }
 
-    .reminder-icon {
-        margin-right: 10px;
-    }
+  .container .added-items .reminder p {
+    color: #b85b52; 
+  }
 
-    .reminder-icon img {
-        margin: auto;
-    }
+  .container .added-items .reminder .reminder-icon {
+    margin-right: 10px;
+  }
 
-    .reminder-info {
-        font-family: "RedhatSemiBold", sans-serif;
-        color: var(--rose-900);
-    }
+  .container .added-items .reminder .reminder-icon img {
+    margin: auto;
+  }
 
-    .confirm-btn {
-        width: 100%;
-    }
+  .container .added-items .reminder .reminder-info {
+    font-family: "RedhatSemiBold";
+    color: #3b0d0c; 
+  }
 
-    .confirm-btn button {
-        width: 100%;
-        border-radius: 30px;
-        background-color: var(--red);
-        padding: 15px;
-        color: var(--rose-50);
-    }
+  .container .added-items .confirm-btn {
+    width: 100%;
+  }
 
-    .confirm-btn button:hover {
-        cursor: pointer;
-        background-color: hsl(14, 86%, 32%); 
-    }
+  .container .added-items .confirm-btn button {
+    width: 100%;
+    border-radius: 30px;
+    background-color: #e3342f; 
+    padding: 15px;
+    color: #fbeaec; 
+  }
+
+  .container .added-items .confirm-btn button:hover {
+    cursor: pointer;
+    background: #c72d26; 
+  }
 }
