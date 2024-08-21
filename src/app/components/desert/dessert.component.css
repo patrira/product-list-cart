@@ -1,6 +1,7 @@
 @media (min-width: 768px) {
   .dessert {
-    width: 250px;
+    width: 400px;
+    height: auto;
   }
   .dessert .dessert-img {
     width: 15rem;
@@ -86,10 +87,10 @@
   }
   .dessert .content .dessert-name {
     font-size: 16px;
-    color: #881337; 
+    color: #260f08; 
   }
   .dessert .content .dessert-category {
-    color: #f43f5e; 
+    color: hsl(13, 31%, 94%); 
     font-size: 14px;
   }
   .dessert .content .dessert-price {
@@ -191,10 +192,10 @@
   }
   .dessert .content .dessert-name {
     font-size: 16px;
-    color: #881337; 
+    color: #260f08; 
   }
   .dessert .content .dessert-category {
-    color: #f43f5e; 
+    color:  hsl(13, 31%, 94%); 
     font-size: 14px;
   }
   .dessert .content .dessert-price {

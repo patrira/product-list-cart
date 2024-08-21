@@ -19,8 +19,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: auto;
-      width: 750px;
+      height: 100%;
+      width: 100%;
       background-color: white;
       position: relative;
     }
@@ -28,7 +28,7 @@
     .wrapper {
       padding: 30px;
       width: 100%;
-      height: auto;
+      height: 100%;
       position: relative;
     }
   
@@ -142,15 +142,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: auto;
-      width: 750px;
+      height: 100%;
+      width: 100%;
       position: relative;
     }
   
     .wrapper {
       padding: 30px;
       width: 100%;
-      height: auto;
+      height: 100%;
       position: relative;
     }
   
