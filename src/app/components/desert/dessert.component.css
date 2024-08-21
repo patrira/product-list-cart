@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
   .dessert {
     width: 400px;
-    height: auto;
+    
   }
   .dessert .dessert-img {
     width: 15rem;
@@ -83,14 +83,14 @@
     width: 0.75rem;
   }
   .dessert .content {
-    margin-top: 40px;
+    margin-top: 5px;
   }
   .dessert .content .dessert-name {
     font-size: 16px;
     color: #260f08; 
   }
   .dessert .content .dessert-category {
-    color: hsl(13, 31%, 94%); 
+    color: hsl(12, 20%, 44%); 
     font-size: 14px;
   }
   .dessert .content .dessert-price {
@@ -188,14 +188,14 @@
     width: 0.75rem;
   }
   .dessert .content {
-    margin: 30px 0px 20px 20px;
+    margin: 80px;
   }
   .dessert .content .dessert-name {
     font-size: 16px;
     color: #260f08; 
   }
   .dessert .content .dessert-category {
-    color:  hsl(13, 31%, 94%); 
+    color:  hsl(12, 20%, 44%);
     font-size: 14px;
   }
   .dessert .content .dessert-price {

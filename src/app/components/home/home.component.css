@@ -2,7 +2,7 @@
 @import url("../../../css/variables.css");
 @import url("../../../css/fonts.css");
 
-@media (min-width: 850px) {
+@media (min-width: 960px) {
   .container {
     display: flex;
     justify-content: center;
@@ -16,16 +16,17 @@
 
   .wrapper {
     display: grid;
-    grid-template-columns: 5fr 2fr;
-    padding: 50px 25px;
+    grid-template-columns: 5fr 3fr;
+    padding: 40px 40px;
+    
   }
 
   .desserts-grid {
     width: 768px;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    column-gap: 5px;
-    row-gap: 5px;
+    column-gap: 3px;
+    row-gap: 3px;
   }
 
   .desserts-title {
@@ -37,10 +38,11 @@
 
   .dessert-container {
     width: 200px;
+    
   }
 
   .confirm-order {
-    position: absolute;
+    position: fixed;
     right: 50%;
     top: 50%;
     transform: translate(50%, -50%);
@@ -50,7 +52,7 @@
   }
 
   .overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -73,6 +75,8 @@
   .wrapper {
     display: grid;
     padding: 20px 20px;
+    
+    
   }
 
   .desserts-grid {
@@ -83,7 +87,8 @@
     font-size: 30px;
     font-family: "RedhatBold";
     color: var(--rose-900);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 60px;
   }
 
   .dessert-container {
@@ -92,6 +97,7 @@
 
   .confirm-order {
     position: fixed;
+    align-items: center;
     bottom: 0px;
     border-radius: 5px;
     background-color: var(--rose-50);
