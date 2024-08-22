@@ -1,6 +1,3 @@
-@import url("../../../css/mixins.css");
-@import url("../../../css/variables.css");
-@import url("../../../css/fonts.css");
 
 @media (min-width: 960px) {
   .container {
