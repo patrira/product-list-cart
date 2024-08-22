@@ -1,175 +1,326 @@
-/* Base Styles */
-.container {
-  background-color: white;
-  padding: 35px 25px;
-  border-radius: 5px;
-  margin-top: 80px;
-}
 
-.container .title {
-  margin-bottom: 25px;
-}
 
-.container .title h1 {
-  color: #e3342f;
-  font-family: "RedhatSemiBold";
-  font-size: 24px;
-}
-
-.container .added-items {
-  text-align: center;
-}
-
-.container .added-items img {
-  margin-bottom: 20px;
-}
-
-.container .added-items p {
-  text-align: left;
-  color: #3b0d0c;
-  font-family: "RedhatSemiBold";
-}
-
-.container .added-items .item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.container .added-items .item .item-about .item-name {
-  margin-bottom: 5px;
-}
-
-.container .added-items .item .item-interaction {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 100%;
-}
-
-.container .added-items .item .item-interaction img {
-  border: 1px solid #e5e7eb;
-  padding: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(50%);
-}
-
-.container .added-items .item .item-interaction img:hover {
-  border: 1px solid black;
-  filter: brightness(0) saturate(100%) invert(0%) sepia(96%)
-    saturate(7480%) hue-rotate(296deg) brightness(101%) contrast(101%);
-}
-
-.container .added-items .item .about-price {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 13px;
-}
-
-.container .added-items .item .about-price .curr-quantity {
-  color: #e3342f;
-  font-size: 13px;
-  margin-right: 5px;
-}
-
-.container .added-items .item .about-price .one-price {
-  color: #e5e7eb;
-  margin-right: 5px;
-}
-
-.container .added-items .item .about-price .total-price {
-  color: #d2a6a3;
-}
-
-.container .added-items .order-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.container .added-items .order-total .order-label {
-  font-size: 12px;
-  color: #b85b52;
-}
-
-.container .added-items .order-total .order-value {
-  font-family: "RedhatBold";
-  font-size: 16px;
-  color: #3b0d0c;
-}
-
-.container .added-items .reminder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: white;
-}
-
-.container .added-items .reminder p {
-  color: #b85b52;
-}
-
-.container .added-items .reminder .reminder-icon {
-  margin-right: 10px;
-}
-
-.container .added-items .reminder .reminder-icon img {
-  margin: auto;
-}
-
-.container .added-items .reminder .reminder-icon img:hover {
-  cursor: pointer;
-}
-
-.container .added-items .confirm-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.container .added-items .confirm-btn button {
-  background-color: var(--rose-500);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.container .added-items .confirm-btn button:hover {
-  background-color: #b85b52;
-}
-
-/* Responsive Styles */
 @media (min-width: 768px) {
   .container {
+    background-color: white; 
     padding: 35px 25px;
+    border-radius: 5px;
     margin-top: 80px;
   }
 
+  .container .title {
+    margin-bottom: 25px;
+
+  }
+
+  .container .title h1 {
+    color: #e3342f; 
+    font-family: "RedhatSemiBold";
+    font-size: 24px;
+  }
+
+  .container .added-items {
+    text-align: center;
+  }
+
+  .container .added-items img {
+    margin-bottom: 20px;
+  }
+
+  .container .added-items p {
+    text-align: left;
+    color: #3b0d0c;
+    font-family: "RedhatSemiBold";
+  }
+
+  .container .added-items .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .container .added-items .item .item-about .item-name {
+    margin-bottom: 5px;
+  }
+
+  .container .added-items .item .item-interaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+  }
+
   .container .added-items .item .item-interaction img {
-    width: 40px;
-    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e5e7eb; 
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+  }
+
+  .container .added-items .item .item-interaction img:hover {
+    border: 1px solid black;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(96%)
+      saturate(7480%) hue-rotate(296deg) brightness(101%) contrast(101%);
+  }
+
+  .container .added-items .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .container .added-items .item .about-price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+  }
+
+  .container .added-items .item .about-price .curr-quantity {
+    color: #e3342f; 
+    font-size: 13px;
+    margin-right: 5px;
+  }
+
+  .container .added-items .item .about-price .one-price {
+    color: #e5e7eb; 
+    margin-right: 5px;
+  }
+
+  .container .added-items .item .about-price .total-price {
+    color: #d2a6a3; 
+  }
+
+  .container .added-items .order-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .container .added-items .order-total .order-label {
+    font-size: 12px;
+    color: #b85b52; 
   }
 
   .container .added-items .order-total .order-value {
-    font-size: 18px;
+    font-family: "RedhatBold";
+    font-size: 16px;
+    color: #3b0d0c; 
+  }
+
+  .container .added-items .reminder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white; 
+  }
+
+  .container .added-items .reminder p {
+    color: #b85b52;
+  }
+
+  .container .added-items .reminder .reminder-icon {
+    margin-right: 10px;
+  }
+
+  .container .added-items .reminder .reminder-icon img {
+    margin: auto;
+  }
+
+  .container .added-items .reminder .reminder-info {
+    font-family: "RedhatSemiBold";
+    color: #3b0d0c; 
+  }
+
+  .container .added-items .confirm-btn {
+    width: 100%;
   }
 
   .container .added-items .confirm-btn button {
-    padding: 15px 30px;
-    font-size: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    background-color: #e3342f; 
+    padding: 15px;
+    color: #fbeaec; 
+  }
+
+  .container .added-items .confirm-btn button:hover {
+    cursor: pointer;
+    background: #c72d26; 
+  }
+}
+
+@media (min-width: 300px) {
+  .container {
+    background-color: white; 
+    padding: 35px 25px;
+    border-radius: 5px;
+  }
+
+  .container .title {
+    margin-bottom: 25px;
+  }
+
+  .container .title h1 {
+    color: #e3342f; 
+    font-family: "RedhatSemiBold";
+    font-size: 24px;
+  }
+
+  .container .added-items {
+    text-align: center;
+  }
+
+  .container .added-items img {
+    margin-bottom: 20px;
+  }
+
+  .container .added-items p {
+    text-align: left;
+    color: #3b0d0c; 
+    font-family: "RedhatSemiBold";
+  }
+
+  .container .added-items .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .container .added-items .item .item-about .item-name {
+    margin-bottom: 5px;
+  }
+
+  .container .added-items .item .item-interaction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+  }
+
+  .container .added-items .item .item-interaction img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e5e7eb; 
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+  }
+
+  .container .added-items .item .item-interaction img:hover {
+    border: 1px solid black;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(96%)
+      saturate(7480%) hue-rotate(296deg) brightness(101%) contrast(101%);
+  }
+
+  .container .added-items .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .container .added-items .item .about-price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+  }
+
+  .container .added-items .item .about-price .curr-quantity {
+    color: #e3342f; 
+    font-size: 13px;
+    margin-right: 5px;
+  }
+
+  .container .added-items .item .about-price .one-price {
+    color: #e5e7eb; 
+    margin-right: 5px;
+  }
+
+  .container .added-items .item .about-price .total-price {
+    color: #d2a6a3; 
+  }
+
+  .container .added-items .order-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .container .added-items .order-total .order-label {
+    font-size: 12px;
+    color: #b85b52; 
+  }
+
+  .container .added-items .order-value {
+    font-family: "RedhatBold";
+    font-size: 16px;
+    color: #3b0d0c; 
+  }
+
+  .container .added-items .reminder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: hsl(13, 31%, 94%); 
+  }
+
+  .container .added-items .reminder p {
+    color: #b85b52; 
+  }
+
+  .container .added-items .reminder .reminder-icon {
+    margin-right: 10px;
+  }
+
+  .container .added-items .reminder .reminder-icon img {
+    margin: auto;
+  }
+
+  .container .added-items .reminder .reminder-info {
+    font-family: "RedhatSemiBold";
+    color: #3b0d0c; 
+  }
+
+  .container .added-items .confirm-btn {
+    width: 100%;
+  }
+
+  .container .added-items .confirm-btn button {
+    width: 100%;
+    border-radius: 30px;
+    background-color: #e3342f; 
+    padding: 15px;
+    color: #fbeaec; 
+  }
+
+  .container .added-items .confirm-btn button:hover {
+    cursor: pointer;
+    background: #c72d26; 
   }
 }
