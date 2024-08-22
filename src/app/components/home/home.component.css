@@ -1,113 +1,98 @@
+/* Base Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(13, 31%, 94%);
+  position: relative;
+  z-index: 0;
+}
 
-@media (min-width: 960px) {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(13, 31%, 94%);
-    position: relative;
-    z-index: 0;
-    
-   
-  }
+.wrapper {
+  display: grid;
+  padding: 20px;
+}
 
-  .wrapper {
-    display: grid;
-    grid-template-columns: 5fr 3fr;
-    padding: 40px 40px;
-    
-  }
+.desserts-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr; /* Single column by default */
+  gap: 10px;
+}
 
-  .desserts-grid {
-    width: 768px;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    column-gap: 3px;
-    row-gap: 3px;
-  }
+.desserts-title {
+  font-size: 24px;
+  font-family: "RedhatBold";
+  color: var(--rose-900);
+  margin-bottom: 20px;
+}
 
-  .desserts-title {
-    font-size: 30px;
-    font-family: "RedhatBold";
-    color: var(--rose-900);
-    margin-bottom: 20px;
-  }
+.dessert-container {
+  width: 100%;
+}
 
-  .dessert-container {
-    width: 200px;
-    
-  }
+.confirm-order {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px; /* Adjusted max-width for better fit */
+  height: auto;
+  border-radius: 10px;
+  background-color: var(--rose-50);
+  z-index: 9999;
+  padding: 15px; /* Reduced padding for smaller screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: auto; /* Ensures content fits within the container */
+}
 
+/* Image Styles */
+.confirm-order img {
+  max-width: 100%; /* Ensure images fit within their container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: to match the container's rounded corners */
+}
+
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
   .confirm-order {
-    position: fixed;
-    right: 50%;
-    top: 50%;
-    transform: translate(50%, -50%);
-    border-radius: 5px;
-    background-color: var(--rose-50);
-    z-index: 9999;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9998;
-    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 90%; /* Ensure it fits within screen width */
+    padding: 10px; /* Further reduced padding for very small screens */
   }
 }
 
-@media (min-width: 300px) {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(13, 31%, 94%);
-    position: relative;
-    z-index: 0;
-  }
-
+@media (min-width: 768px) {
   .wrapper {
-    display: grid;
-    padding: 20px 20px;
-    
-    
+    padding: 40px;
   }
 
   .desserts-grid {
-    width: 100%;
+    grid-template-columns: repeat(3, 1fr); /* Three columns on tablets */
+  }
+}
+
+@media (min-width: 960px) {
+  .wrapper {
+    grid-template-columns: 5fr 3fr;
   }
 
   .desserts-title {
     font-size: 30px;
-    font-family: "RedhatBold";
-    color: var(--rose-900);
-    margin-bottom: 30px;
-    margin-top: 60px;
   }
 
-  .dessert-container {
-    width: 100%;
-  }
-
-  .confirm-order {
-    position: fixed;
-    align-items: center;
-    bottom: 0px;
-    border-radius: 5px;
-    background-color: var(--rose-50);
-    z-index: 9999;
-  }
-
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9998;
-    background-color: rgba(0, 0, 0, 0.5);
+  .desserts-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
   }
 }
