@@ -42,14 +42,14 @@
   width: 100%;
 }
 
-/* Confirm Order Component */
+
 .confirm-order {
-  position: fixed; /* Centered on the screen */
+  position: fixed; 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%; /* Adjusted for small screens */
-  max-width: 450px; /* Reduced max-width for small screens */
+  width: 90%; 
+  max-width: 450px; 
   height: auto;
   max-height: 80vh;
   overflow-y: auto;
@@ -70,11 +70,11 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive Styles */
+
 @media (max-width: 767px) {
   .confirm-order {
-    max-width: 90%; /* Ensure it fits within screen width */
-    padding: 10px; /* Reduced padding for small screens */
+    max-width: 90%; 
+    padding: 10px; 
   }
 }
 

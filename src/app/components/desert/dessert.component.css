@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
   .dessert {
     width: 400px;
-    margin: 0 auto; /* Center the dessert card */
+    margin: 0 auto; 
   }
 
   .dessert .dessert-img {
@@ -22,7 +22,7 @@
 
   .dessert .dessert-img .add-cart {
     position: absolute;
-    bottom: -10px; /* Position just below the image */
+    bottom: -10px; 
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -71,10 +71,10 @@
 
   .dessert .dessert-img .add-cart .pick-form .increase-btn,
   .dessert .dessert-img .add-cart .pick-form .decrease-btn {
-    color: white;
+    color: #dc2626;
     font-size: 16px;
-    background-color: transparent;
-    border: 1px solid white;
+    background-color: white;
+    border: 1px solid #dc2626;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -96,32 +96,32 @@
   }
 
   .dessert .content {
-    margin-top: 10px; /* Increased margin for better spacing */
-    text-align: left; /* Align text to the left */
-    padding: 0 10px; /* Add horizontal padding to align with image */
+    margin-top: 10px;  
+    text-align: left; 
+    padding: 0 10px; 
   }
 
   .dessert .content .dessert-name,
   .dessert .content .dessert-category,
   .dessert .content .dessert-price {
-    margin: 5px 0; /* Add margin to ensure spacing */
-    width: 100%; /* Ensure content takes full width */
+    margin: 5px 0; 
+    width: 100%; 
   }
 
   .dessert .content .dessert-name {
-    font-size: 18px; /* Adjusted font size */
+    font-size: 18px; 
     color: #260f08;
   }
 
   .dessert .content .dessert-category {
     color: hsl(12, 20%, 44%);
-    font-size: 16px; /* Adjusted font size */
+    font-size: 16px; 
   }
 
   .dessert .content .dessert-price {
     color: #dc2626;
     font-family: "RedhatSemiBold";
-    font-size: 16px; /* Adjusted font size */
+    font-size: 16px; 
   }
 
   .selected {
@@ -133,7 +133,7 @@
 @media (min-width: 300px) {
   .dessert {
     width: 100%;
-    margin: 0 auto; /* Center the dessert card */
+    margin: 0 auto; 
   }
 
   .dessert .dessert-img {
@@ -154,7 +154,7 @@
 
   .dessert .dessert-img .add-cart {
     position: absolute;
-    bottom: -10px; /* Position just below the image */
+    bottom: -10px; 
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -217,8 +217,8 @@
 
   .dessert .dessert-img .add-cart .pick-form .increase-btn:hover,
   .dessert .dessert-img .add-cart .pick-form .decrease-btn:hover {
-    background-color: white;
-    color: #dc2626;
+    background-color: #dc2626;
+    color: white;
     cursor: pointer;
   }
 
@@ -229,8 +229,8 @@
 
   .dessert .content {
     margin-top: 10px;
-    text-align: left; /* Align text to the left */
-    padding: 0 10px; /* Add horizontal padding to align with image */
+    text-align: left; 
+    padding: 0 10px; 
   }
 
   .dessert .content .dessert-name,
